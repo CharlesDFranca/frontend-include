@@ -10,7 +10,7 @@ async function getDoctors() {
     }
 
     try {
-        const response = await axios.get('http://localhost:3000/doctors', {
+        const response = await axios.get('https://include-backend.onrender.com/doctors', {
             headers: {
                 Authorization: `Bearer ${token}`, 
             }
