@@ -1,0 +1,63 @@
+/* Atualizar/substituir as regras CSS do menu-dropdown */
+.menu-dropdown {
+    display: none;
+    position: fixed;
+    top: 142px;
+    left: 0;
+    height: calc(100vh - 142px);
+    width: 250px;
+    background: white;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    flex-direction: column;
+}
+
+.menu-dropdown.active {
+    display: flex;
+}
+
+.menu-main {
+    flex-grow: 1;
+    padding: 1rem 0;
+}
+
+.menu-bottom {
+    border-top: 1px solid #e5e5e5;
+    padding: 1rem 0;
+    margin-top: auto;
+}
+
+.menu-dropdown a {
+    display: flex;
+    align-items: center;
+    color: #333;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.menu-dropdown a i {
+    width: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #55917F;
+}
+
+.menu-dropdown a:hover {
+    background: #f5f5f5;
+    color: #55917F;
+}
+
+@media (max-width: 768px) {
+    .menu-dropdown {
+        width: 100%;
+        top: 110px;
+    }
+
+    .menu-dropdown a {
+        padding: 0.8rem 1.2rem;
+        font-size: 1rem;
+    }
+}

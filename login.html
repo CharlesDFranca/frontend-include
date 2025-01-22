@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedPrime - Login</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="/login.css" rel="stylesheet" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/LogoClinica.png" alt="MedPrime Medical Clinic" />
+          </a>
+        </div>
+        <!-- patient menu start -->
+        <div class="menu-dropdown patient-menu hiden">
+          <div class="menu-main">
+            <a href="agendar-consultas.html" class="active">
+              <i class="fas fa-calendar-alt"></i>
+              Agendar consulta
+            </a>
+            <a href="cancelar-consulta.html">
+              <i class="fas fa-user-friends"></i>
+              Minhas consultas
+            </a>
+            <a href="#">
+              <i class="fa-regular fa-clipboard"></i>
+              Pacotes de consultas
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-suitcase-medical"></i>
+              Médicos e Especialistas
+            </a>
+          </div>
+          <div class="menu-bottom">
+            <a href="config.html">
+              <i class="fas fa-cog"></i>
+              Configurações
+            </a>
+            <a href="ajuda.html">
+              <i class="fas fa-question-circle"></i>
+              Ajuda
+            </a>
+          </div>
+        </div>
+        <!-- patient menu end -->
+
+        <!-- doctor menu start -->
+        <div class="menu-dropdown doctor-menu hiden">
+          <div class="menu-main">
+            <a href="#">
+              <i class="fas fa-calendar-alt"></i>
+              Minha agenda
+            </a>
+            <a href="#">
+              <i class="fas fa-clipboard-list"></i>
+              Gerenciar consultas
+            </a>
+            <a href="#">
+              <i class="fas fa-history"></i>
+              Histórico de pacientes
+            </a>
+          </div>
+          <div class="menu-bottom">
+            <a href="config.html">
+              <i class="fas fa-cog"></i>
+              Configurações
+            </a>
+            <a href="ajuda.html">
+              <i class="fas fa-question-circle"></i>
+              Ajuda
+            </a>
+          </div>
+        </div>
+        <!-- doctor menu end -->
+      </div>
+      <div class="header-right">
+        <span class="phone">0800 487 2427</span>
+        <button class="login-btn">
+          <i class="fas fa-sign-in-alt"></i> Entrar
+        </button>
+        <span class="location"> <i class="fas fa-map-marker-alt"></i> CE </span>
+      </div>
+    </header>
+
+    <div class="container">
+      <h1 class="login-title">Entre com a sua conta</h1>
+      <p class="login-subtitle">Informe seu e-mail e senha para ter acesso</p>
+
+      <div class="form-container">
+        <form id="form-login">
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required />
+          </div>
+
+          <button type="submit" class="submit-btn">Entrar</button>
+          <a href="#" class="forgot-password">Esqueceu sua senha?</a>
+        </form>
+      </div>
+      <div class="register-container">
+        <p>
+          Não possui uma conta?
+          <a href="#" class="register-link">Cadastre-se</a>
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      document
+        .getElementById("form-login")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          console.log("ok");
+
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("senha").value;
+
+          const clientData = { email, password };
+
+          try {
+            const response = await axios.post(
+              "http://localhost:3000/auth",
+              clientData
+            );
+
+            const { access_token, role } = response.data.token;
+
+            localStorage.setItem("token", access_token.access_token);
+            localStorage.setItem("role", role);
+
+            document.getElementById("form-login").reset();
+            window.location.href = "./index.html";
+          } catch (error) {
+            console.error(error);
+            alert("Erro no login. Tente novamente!");
+          }
+        });
+    </script>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector(".menu-dropdown");
+        menu.classList.toggle("active");
+      }
+    </script>
+    <script>
+      const role = localStorage.getItem("role");
+
+      const patientMenu = document.querySelector(".patient-menu");
+      const doctorMenu = document.querySelector(".doctor-menu");
+
+      console.log(role);
+
+      if (role === "doctor") {
+        patientMenu.classList.add("hidden");
+        doctorMenu.classList.remove("hidden");
+      } else {
+        doctorMenu.classList.add("hidden");
+        patientMenu.classList.remove("hidden");
+      }
+    </script>
+  </body>
+</html>

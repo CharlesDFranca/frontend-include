@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedPrime - Cancelamento de Consulta</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="cancelar-consulta.css" rel="stylesheet" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/LogoClinica.png" alt="MedPrime Medical Clinic" />
+          </a>
+        </div>
+        <!-- patient menu start -->
+        <div class="menu-dropdown patient-menu hiden">
+          <div class="menu-main">
+            <a href="agendar-consultas.html" class="active">
+              <i class="fas fa-calendar-alt"></i>
+              Agendar consulta
+            </a>
+            <a href="cancelar-consulta.html">
+              <i class="fas fa-user-friends"></i>
+              Minhas consultas
+            </a>
+            <a href="#">
+              <i class="fa-regular fa-clipboard"></i>
+              Pacotes de consultas
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-suitcase-medical"></i>
+              Médicos e Especialistas
+            </a>
+          </div>
+          <div class="menu-bottom">
+            <a href="config.html">
+              <i class="fas fa-cog"></i>
+              Configurações
+            </a>
+            <a href="ajuda.html">
+              <i class="fas fa-question-circle"></i>
+              Ajuda
+            </a>
+          </div>
+        </div>
+        <!-- patient menu end -->
+
+        <!-- doctor menu start -->
+        <div class="menu-dropdown doctor-menu hiden">
+          <div class="menu-main">
+            <a href="#">
+              <i class="fas fa-calendar-alt"></i>
+              Minha agenda
+            </a>
+            <a href="#">
+              <i class="fas fa-clipboard-list"></i>
+              Gerenciar consultas
+            </a>
+            <a href="#">
+              <i class="fas fa-history"></i>
+              Histórico de pacientes
+            </a>
+          </div>
+          <div class="menu-bottom">
+            <a href="config.html">
+              <i class="fas fa-cog"></i>
+              Configurações
+            </a>
+            <a href="ajuda.html">
+              <i class="fas fa-question-circle"></i>
+              Ajuda
+            </a>
+          </div>
+        </div>
+        <!-- doctor menu end -->
+      </div>
+      <div class="header-right">
+        <span class="phone">0800 487 2427</span>
+        <button class="login-btn">
+          <i class="fas fa-sign-in-alt"></i> Entrar
+        </button>
+        <span class="location"> <i class="fas fa-map-marker-alt"></i> CE </span>
+      </div>
+    </header>
+
+    <div class="consultation-list">
+      <div class="consultation-item" data-id="1">
+        <div class="doctor-info">
+          <h3>Dr. Natali dos Reis</h3>
+          <p class="doctor-specialty">Médico cardiologista</p>
+          <p class="doctor-address">
+            Avenida Dom Luís, 500<br />60160-230<br />Fortaleza - Ceará
+          </p>
+        </div>
+        <button class="cancel-btn" onclick="showCancelModal(1)">
+          Cancelar consulta
+        </button>
+      </div>
+      <div class="consultation-item" data-id="2">
+        <div class="doctor-info">
+          <h3>Dr. João Silva</h3>
+          <p class="doctor-specialty">Ortopedista</p>
+          <p class="doctor-address">
+            Rua Barão de Studart, 300<br />60160-300<br />Fortaleza - Ceará
+          </p>
+        </div>
+        <button class="cancel-btn" onclick="showCancelModal(2)">
+          Cancelar consulta
+        </button>
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="cancel-modal" id="cancelModal">
+      <h2 class="modal-title">Qual o motivo do seu cancelamento?</h2>
+      <textarea
+        id="cancelReason"
+        class="modal-textarea"
+        placeholder="Conte-nos mais..."
+      ></textarea>
+      <div class="modal-buttons">
+        <button class="modal-cancel" onclick="hideCancelModal()">
+          Cancelar
+        </button>
+        <button class="modal-confirm" onclick="confirmCancellation()">
+          Confirmar cancelamento
+        </button>
+      </div>
+    </div>
+
+    <div class="success-notification" id="successNotification">
+      <p>Consulta cancelada com sucesso!</p>
+    </div>
+
+    <script src="cancel.js"></script>
+    <script>
+      const role = localStorage.getItem("role");
+
+      const patientMenu = document.querySelector(".patient-menu");
+      const doctorMenu = document.querySelector(".doctor-menu");
+
+      console.log(role);
+
+      if (role === "doctor") {
+        patientMenu.classList.add("hidden");
+        doctorMenu.classList.remove("hidden");
+      } else {
+        doctorMenu.classList.add("hidden");
+        patientMenu.classList.remove("hidden");
+      }
+    </script>
+  </body>
+</html>

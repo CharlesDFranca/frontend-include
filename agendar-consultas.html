@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedPrime - Home</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="agendar-consulta.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/LogoClinica.png" alt="MedPrime Medical Clinic" />
+          </a>
+        </div>
+        <!-- patient menu start -->
+        <div class="menu-dropdown patient-menu hiden">
+          <div class="menu-main">
+            <a href="agendar-consultas.html" class="active">
+              <i class="fas fa-calendar-alt"></i>
+              Agendar consulta
+            </a>
+            <a href="cancelar-consulta.html">
+              <i class="fas fa-user-friends"></i>
+              Minhas consultas
+            </a>
+            <a href="#">
+              <i class="fa-regular fa-clipboard"></i>
+              Pacotes de consultas
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-suitcase-medical"></i>
+              Médicos e Especialistas
+            </a>
+          </div>
+          <div class="menu-bottom">
+            <a href="config.html">
+              <i class="fas fa-cog"></i>
+              Configurações
+            </a>
+            <a href="ajuda.html">
+              <i class="fas fa-question-circle"></i>
+              Ajuda
+            </a>
+          </div>
+        </div>
+        <!-- patient menu end -->
+
+        <!-- doctor menu start -->
+        <div class="menu-dropdown doctor-menu hiden">
+          <div class="menu-main">
+            <a href="#">
+              <i class="fas fa-calendar-alt"></i>
+              Minha agenda
+            </a>
+            <a href="#">
+              <i class="fas fa-clipboard-list"></i>
+              Gerenciar consultas
+            </a>
+            <a href="#">
+              <i class="fas fa-history"></i>
+              Histórico de pacientes
+            </a>
+          </div>
+          <div class="menu-bottom">
+            <a href="config.html">
+              <i class="fas fa-cog"></i>
+              Configurações
+            </a>
+            <a href="ajuda.html">
+              <i class="fas fa-question-circle"></i>
+              Ajuda
+            </a>
+          </div>
+        </div>
+        <!-- doctor menu end -->
+      </div>
+      <div class="header-right">
+        <span class="phone">0800 487 2427</span>
+        <button class="login-btn">
+          <i class="fas fa-sign-in-alt"></i> Entrar
+        </button>
+        <span class="location"> <i class="fas fa-map-marker-alt"></i> CE </span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <h1 class="hero-title">
+          Encontre os melhores profissionais de saúde<br />
+          da sua região e agende uma consulta.
+        </h1>
+
+        <div class="search-form">
+          <input
+            type="text"
+            placeholder="Nome ou especialidade"
+            class="search-input"
+          />
+          <input type="text" placeholder="Cidade" class="search-input" />
+          <input type="text" placeholder="Horário" class="search-input" />
+          <input
+            type="text"
+            placeholder="Presencial ou teleconsulta"
+            class="search-input"
+          />
+          <button class="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="appointments-section">
+        <h2 class="appointments-title">Últimas consultas marcadas</h2>
+        <div class="appointments-grid">
+          <div class="appointment-card">
+            <div class="appointment-header">
+              <span class="appointment-time">há 6 minutos</span>
+            </div>
+            <div class="doctor-content">
+              <i class="fas fa-user-md doctor-icon"></i>
+              <div class="doctor-info">
+                <span class="doctor-type">Médico dermatologista</span>
+                <span class="location-text">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Fortaleza - CE
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="appointment-card">
+            <div class="appointment-header">
+              <span class="appointment-time">há 12 minutos</span>
+            </div>
+            <div class="doctor-content">
+              <i class="fas fa-user-md doctor-icon"></i>
+              <div class="doctor-info">
+                <span class="doctor-type">Médico cardiologista</span>
+                <span class="location-text">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Caucaia - CE
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="appointment-card">
+            <div class="appointment-header">
+              <span class="appointment-time">há 27 minutos</span>
+            </div>
+            <div class="doctor-content">
+              <i class="fas fa-user-md doctor-icon"></i>
+              <div class="doctor-info">
+                <span class="doctor-type">Psicólogo</span>
+                <span class="location-text">
+                  <i class="fas fa-video"></i>
+                  Teleconsulta
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="appointment-card">
+            <div class="appointment-header">
+              <span class="appointment-time">há 45 minutos</span>
+            </div>
+            <div class="doctor-content">
+              <i class="fas fa-user-md doctor-icon"></i>
+              <div class="doctor-info">
+                <span class="doctor-type">Médico pediatra</span>
+                <span class="location-text">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Maracanaú - CE
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="appointment-card">
+            <div class="appointment-header">
+              <span class="appointment-time">há 1 hora</span>
+            </div>
+            <div class="doctor-content">
+              <i class="fas fa-user-md doctor-icon"></i>
+              <div class="doctor-info">
+                <span class="doctor-type">Nutricionista</span>
+                <span class="location-text">
+                  <i class="fas fa-video"></i>
+                  Teleconsulta
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="appointment-card">
+            <div class="appointment-header">
+              <span class="appointment-time">há 1 hora</span>
+            </div>
+            <div class="doctor-content">
+              <i class="fas fa-user-md doctor-icon"></i>
+              <div class="doctor-info">
+                <span class="doctor-type">Médico ortopedista</span>
+                <span class="location-text">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Fortaleza - CE
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+    <script src="doctor-search.js"></script>
+
+    <!-- <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+    ></script> -->
+    <script>
+      const role = localStorage.getItem("role");
+
+      const patientMenu = document.querySelector(".patient-menu");
+      const doctorMenu = document.querySelector(".doctor-menu");
+
+      if (role === "doctor") {
+        patientMenu.classList.add("hidden");
+        doctorMenu.classList.remove("hidden");
+      } else {
+        doctorMenu.classList.add("hidden");
+        patientMenu.classList.remove("hidden");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions</title>
+    <link rel="stylesheet" href="ajuda.css" />
+    <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/LogoClinica.png" alt="MedPrime Medical Clinic" />
+          </a>
+        </div>
+        <!-- patient menu start -->
+        <div class="menu-dropdown patient-menu hiden">
+          <div class="menu-main">
+            <a href="agendar-consultas.html" class="active">
+              <i class="fas fa-calendar-alt"></i>
+              Agendar consulta
+            </a>
+            <a href="cancelar-consulta.html">
+              <i class="fas fa-user-friends"></i>
+              Minhas consultas
+            </a>
+            <a href="#">
+              <i class="fa-regular fa-clipboard"></i>
+              Pacotes de consultas
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-suitcase-medical"></i>
+              Médicos e Especialistas
+            </a>
+          </div>
+          <div class="menu-bottom">
+            <a href="config.html">
+              <i class="fas fa-cog"></i>
+              Configurações
+            </a>
+            <a href="ajuda.html">
+              <i class="fas fa-question-circle"></i>
+              Ajuda
+            </a>
+          </div>
+        </div>
+        <!-- patient menu end -->
+
+        <!-- doctor menu start -->
+        <div class="menu-dropdown doctor-menu hiden">
+          <div class="menu-main">
+            <a href="#">
+              <i class="fas fa-calendar-alt"></i>
+              Minha agenda
+            </a>
+            <a href="#">
+              <i class="fas fa-clipboard-list"></i>
+              Gerenciar consultas
+            </a>
+            <a href="#">
+              <i class="fas fa-history"></i>
+              Histórico de pacientes
+            </a>
+          </div>
+          <div class="menu-bottom">
+            <a href="config.html">
+              <i class="fas fa-cog"></i>
+              Configurações
+            </a>
+            <a href="ajuda.html">
+              <i class="fas fa-question-circle"></i>
+              Ajuda
+            </a>
+          </div>
+        </div>
+        <!-- doctor menu end -->
+      </div>
+      <div class="header-right">
+        <span class="phone">0800 487 2427</span>
+        <button class="login-btn">
+          <i class="fas fa-sign-in-alt"></i> Entrar
+        </button>
+        <span class="location"> <i class="fas fa-map-marker-alt"></i> CE </span>
+      </div>
+    </header>
+    <div class="wrapper">
+      <p>MedPrime Medical Clinic - Sua saúde em boas mãos</p>
+      <h1>Perguntas Frequentes</h1>
+
+      <div class="faq">
+        <button class="accordion">
+          Como posso agendar uma consulta?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Você pode agendar uma consulta diretamente pelo nosso site, pelo
+            aplicativo ou ligando para o nosso telefone de atendimento: 0800 487
+            2427.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          Quais especialidades médicas estão disponíveis?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Nossa clínica oferece especialidades como cardiologia, dermatologia,
+            ginecologia, ortopedia, pediatria, entre outras. Consulte nossa
+            lista completa de especialistas no site.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          Como funcionam os pacotes de consultas?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Os pacotes de consultas permitem que você economize ao adquirir um
+            conjunto de consultas em diferentes especialidades. Entre em contato
+            para mais informações sobre os valores e condições.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          A clínica aceita convênios?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Sim, aceitamos diversos convênios. Consulte nossa lista de convênios
+            parceiros ou entre em contato com nossa equipe para confirmar.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          Como funciona o atendimento de emergência?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Para emergências, recomendamos ligar diretamente para nosso setor de
+            urgência pelo número 0800 487 2428. O atendimento é realizado 24
+            horas por dia.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          Quais são os horários de funcionamento da clínica?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Nossa clínica funciona de segunda a sexta-feira, das 7h às 19h, e
+            aos sábados das 7h às 13h. Não abrimos aos domingos.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          this.parentElement.classList.toggle("active");
+
+          var pannel = this.nextElementSibling;
+
+          if (pannel.style.display === "block") {
+            pannel.style.display = "none";
+          } else {
+            pannel.style.display = "block";
+          }
+        });
+      }
+    </script>
+    <script>
+      const role = localStorage.getItem("role");
+
+      const patientMenu = document.querySelector(".patient-menu");
+      const doctorMenu = document.querySelector(".doctor-menu");
+
+      console.log(role);
+
+      if (role === "doctor") {
+        patientMenu.classList.add("hidden");
+        doctorMenu.classList.remove("hidden");
+      } else {
+        doctorMenu.classList.add("hidden");
+        patientMenu.classList.remove("hidden");
+      }
+    </script>
+  </body>
+</html>

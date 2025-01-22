@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedPrime - Configurações</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="config.css" rel="stylesheet" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/LogoClinica.png" alt="MedPrime Medical Clinic" />
+          </a>
+        </div>
+        <!-- patient menu start -->
+        <div class="menu-dropdown patient-menu hiden">
+          <div class="menu-main">
+            <a href="agendar-consultas.html" class="active">
+              <i class="fas fa-calendar-alt"></i>
+              Agendar consulta
+            </a>
+            <a href="cancelar-consulta.html">
+              <i class="fas fa-user-friends"></i>
+              Minhas consultas
+            </a>
+            <a href="#">
+              <i class="fa-regular fa-clipboard"></i>
+              Pacotes de consultas
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-suitcase-medical"></i>
+              Médicos e Especialistas
+            </a>
+          </div>
+          <div class="menu-bottom">
+            <a href="config.html">
+              <i class="fas fa-cog"></i>
+              Configurações
+            </a>
+            <a href="ajuda.html">
+              <i class="fas fa-question-circle"></i>
+              Ajuda
+            </a>
+          </div>
+        </div>
+        <!-- patient menu end -->
+
+        <!-- doctor menu start -->
+        <div class="menu-dropdown doctor-menu hiden">
+          <div class="menu-main">
+            <a href="#">
+              <i class="fas fa-calendar-alt"></i>
+              Minha agenda
+            </a>
+            <a href="#">
+              <i class="fas fa-clipboard-list"></i>
+              Gerenciar consultas
+            </a>
+            <a href="#">
+              <i class="fas fa-history"></i>
+              Histórico de pacientes
+            </a>
+          </div>
+          <div class="menu-bottom">
+            <a href="config.html">
+              <i class="fas fa-cog"></i>
+              Configurações
+            </a>
+            <a href="ajuda.html">
+              <i class="fas fa-question-circle"></i>
+              Ajuda
+            </a>
+          </div>
+        </div>
+        <!-- doctor menu end -->
+      </div>
+      <div class="header-right">
+        <span class="phone">0800 487 2427</span>
+        <button class="login-btn">
+          <i class="fas fa-sign-in-alt"></i> Entrar
+        </button>
+        <span class="location"> <i class="fas fa-map-marker-alt"></i> CE </span>
+      </div>
+    </header>
+
+    <main>
+      <section class="settings-section">
+        <div class="container">
+          <div class="settings-grid">
+            <div class="settings-card">
+              <div class="settings-header">
+                <i class="fas fa-user-circle"></i>
+                <h2>Perfil</h2>
+              </div>
+              <div class="settings-content">
+                <div class="settings-item">
+                  <label>Nome completo</label>
+                  <input
+                    type="text"
+                    value="João da Silva"
+                    class="settings-input"
+                  />
+                </div>
+                <div class="settings-item">
+                  <label>E-mail</label>
+                  <input
+                    type="email"
+                    value="joao.silva@email.com"
+                    class="settings-input"
+                  />
+                </div>
+                <div class="settings-item">
+                  <label>Telefone</label>
+                  <input
+                    type="tel"
+                    value="(85) 99999-9999"
+                    class="settings-input"
+                  />
+                </div>
+                <button class="save-btn">Salvar alterações</button>
+              </div>
+            </div>
+
+            <div class="settings-card">
+              <div class="settings-header">
+                <i class="fas fa-bell"></i>
+                <h2>Notificações</h2>
+              </div>
+              <div class="settings-content">
+                <div class="settings-toggle">
+                  <span>Notificações por e-mail</span>
+                  <label class="switch">
+                    <input type="checkbox" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="settings-toggle">
+                  <span>Lembretes de consulta</span>
+                  <label class="switch">
+                    <input type="checkbox" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="settings-toggle">
+                  <span>Promoções e novidades</span>
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="settings-card">
+              <div class="settings-header">
+                <i class="fas fa-lock"></i>
+                <h2>Segurança</h2>
+              </div>
+              <div class="settings-content">
+                <div class="settings-item">
+                  <label>Senha atual</label>
+                  <input
+                    type="password"
+                    placeholder="••••••••"
+                    class="settings-input"
+                  />
+                </div>
+                <div class="settings-item">
+                  <label>Nova senha</label>
+                  <input
+                    type="password"
+                    placeholder="••••••••"
+                    class="settings-input"
+                  />
+                </div>
+                <div class="settings-item">
+                  <label>Confirmar nova senha</label>
+                  <input
+                    type="password"
+                    placeholder="••••••••"
+                    class="settings-input"
+                  />
+                </div>
+                <button class="save-btn">Atualizar senha</button>
+              </div>
+            </div>
+
+            <div class="settings-card">
+              <div class="settings-header">
+                <i class="fas fa-sliders-h"></i>
+                <h2>Preferências</h2>
+              </div>
+              <div class="settings-content">
+                <div class="settings-select">
+                  <label>Idioma</label>
+                  <select class="settings-input">
+                    <option>Português</option>
+                    <option>English</option>
+                    <option>Español</option>
+                  </select>
+                </div>
+                <div class="settings-select">
+                  <label>Fuso horário</label>
+                  <select class="settings-input">
+                    <option>Brasília (UTC-3)</option>
+                    <option>São Paulo (UTC-3)</option>
+                    <option>Fernando de Noronha (UTC-2)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const role = localStorage.getItem("role");
+
+      const patientMenu = document.querySelector(".patient-menu");
+      const doctorMenu = document.querySelector(".doctor-menu");
+
+      console.log(role);
+
+      if (role === "doctor") {
+        patientMenu.classList.add("hidden");
+        doctorMenu.classList.remove("hidden");
+      } else {
+        doctorMenu.classList.add("hidden");
+        patientMenu.classList.remove("hidden");
+      }
+    </script>
+  </body>
+</html>

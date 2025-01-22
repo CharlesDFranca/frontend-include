@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedPrime - Os Melhores Especialistas</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="pagina-inicial.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./menu-medico.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/LogoClinica.png" alt="MedPrime Medical Clinic" />
+          </a>
+        </div>
+
+        <!-- patient menu start -->
+        <div class="menu-dropdown patient-menu hiden">
+          <div class="menu-main">
+            <a href="agendar-consultas.html" class="active">
+              <i class="fas fa-calendar-alt"></i>
+              Agendar consulta
+            </a>
+            <a href="cancelar-consulta.html">
+              <i class="fas fa-user-friends"></i>
+              Minhas consultas
+            </a>
+            <a href="#">
+              <i class="fa-regular fa-clipboard"></i>
+              Pacotes de consultas
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-suitcase-medical"></i>
+              Médicos e Especialistas
+            </a>
+          </div>
+          <div class="menu-bottom">
+            <a href="config.html">
+              <i class="fas fa-cog"></i>
+              Configurações
+            </a>
+            <a href="ajuda.html">
+              <i class="fas fa-question-circle"></i>
+              Ajuda
+            </a>
+          </div>
+        </div>
+        <!-- patient menu end -->
+
+        <!-- doctor menu start -->
+        <div class="menu-dropdown doctor-menu hiden">
+          <div class="menu-main">
+            <a href="#">
+              <i class="fas fa-calendar-alt"></i>
+              Minha agenda
+            </a>
+            <a href="#">
+              <i class="fas fa-clipboard-list"></i>
+              Gerenciar consultas
+            </a>
+            <a href="#">
+              <i class="fas fa-history"></i>
+              Histórico de pacientes
+            </a>
+          </div>
+          <div class="menu-bottom">
+            <a href="config.html">
+              <i class="fas fa-cog"></i>
+              Configurações
+            </a>
+            <a href="ajuda.html">
+              <i class="fas fa-question-circle"></i>
+              Ajuda
+            </a>
+          </div>
+        </div>
+        <!-- doctor menu end -->
+      </div>
+      <div class="header-right">
+        <span class="phone">0800 487 2427</span>
+        <button class="login-btn">
+          <i class="fas fa-sign-in-alt"></i> Entrar
+        </button>
+        <span class="location"> <i class="fas fa-map-marker-alt"></i> CE </span>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="hero-section">
+        <div class="hero-text">
+          <button
+            class="schedule-btn"
+            onclick="window.location.href='agendar-consultas.html';"
+          >
+            Agendar uma consulta
+          </button>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="service-card">
+          <i class="fas fa-pen-to-square"></i>
+          <div class="service-text">
+            <h3>Serviços de laboratório</h3>
+            <p>Exames clínicos e diagnósticos com precisão.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-user-md"></i>
+          <div class="service-text">
+            <h3>Profissionais renomados</h3>
+            <p>Médicos especialistas reconhecidos na área.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-calendar-check"></i>
+          <div class="service-text">
+            <h3>Profissionais disponíveis a semana inteira</h3>
+            <p>Atendimento médico de segunda a sábado.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section__container">
+        <h2>Feedbacks</h2>
+        <h1>O que nossos pacientes falam de nós</h1>
+        <div class="section__grid">
+          <div class="section__card">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <h4>Amei a praticidade</h4>
+            <p>
+              "O agendamento online foi super prático e me poupou muito tempo.
+              Sem filas, sem espera, e pude escolher o melhor horário para mim!"
+            </p>
+            <img src="assets/profileicon.png" alt="user" />
+            <h5>Mariana Souza</h5>
+            <h6>Paciente MedPrime</h6>
+          </div>
+          <div class="section__card">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <h4>Excelente Atendimento</h4>
+            <p>
+              "A facilidade do sistema online me surpreendeu. Consegui marcar a
+              consulta de forma rápida e recebi todas as informações por e-mail.
+              Excelente!"
+            </p>
+            <img src="assets/profileicon.png" alt="user" />
+            <h5>Renato Lima</h5>
+            <h6>Paciente MedPrime</h6>
+          </div>
+
+          <div class="section__card">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <h4>Eficiente e Confiável</h4>
+            <p>
+              "Com o agendamento online, foi simples organizar minha consulta
+              mesmo com a correria do dia. Um sistema moderno e eficiente!"
+            </p>
+            <img src="assets/profileicon.png" alt="user" />
+            <h5>Fernanda Lima</h5>
+            <h6>Paciente MedPrime</h6>
+          </div>
+        </div>
+      </section>
+      <section class="calendly-section">
+        <div class="container">
+          <script
+            src="https://static.elfsight.com/platform/platform.js"
+            async
+          ></script>
+          <div
+            class="elfsight-app-61ade537-2a10-48ff-9f07-f1214db4f04c"
+            data-elfsight-app-lazy
+          ></div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const role = localStorage.getItem("role");
+
+      const patientMenu = document.querySelector(".patient-menu");
+      const doctorMenu = document.querySelector(".doctor-menu");
+
+      console.log(role);
+
+      if (role === "doctor") {
+        patientMenu.classList.add("hidden");
+        doctorMenu.classList.remove("hidden");
+      } else {
+        doctorMenu.classList.add("hidden");
+        patientMenu.classList.remove("hidden");
+      }
+    </script>
+  </body>
+</html>

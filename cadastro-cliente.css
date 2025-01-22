@@ -1,0 +1,273 @@
+:root {
+    --primary-color: #55917F;
+    --text-color: #333;
+    --background-color: #F5F6FA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #3f856f 0%, #ffffff 100%);
+    min-height: 100vh;
+    color: var(--text-color);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    height: 142px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+.menu-icon {
+    font-size: 24px; 
+    cursor: pointer; 
+    color: var(--text-color);
+}
+
+.menu-icon:hover {
+    color: var(--primary-color); 
+    transition: color 0.3s ease; 
+}
+
+.menu-dropdown {
+    display: none;
+    position: fixed;
+    top: 142px; 
+    left: 0;
+    height: calc(100vh - 142px);
+    width: 250px;
+    background: white;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+}
+
+.menu-dropdown.active {
+    display: flex;
+}
+
+.menu-main {
+    flex-grow: 1;
+    padding: 1rem 0;
+}
+
+.menu-bottom {
+    border-top: 1px solid #e5e5e5;
+    padding: 1rem 0;
+}
+
+.menu-dropdown a {
+    display: flex;
+    align-items: center;
+    color: #333;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.menu-dropdown a i {
+    width: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.menu-dropdown a:hover,
+.menu-dropdown a.active {
+    background: #55917F;
+    color: white;
+}
+
+
+.menu-icon {
+    position: relative;
+    z-index: 1001;
+    padding: 0.5rem;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.phone {
+    color: #000000;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #4a7668;
+    border-radius: 10px;
+}
+
+.location {
+    background: none;
+    color: #333;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.login-btn {
+    height: 100px;
+    background: none;
+    border: none;
+    color: #4a7668;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.page-title {
+    color: white;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    color: white;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.card {
+    background: #cbd6d2;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #2E8B57;
+    color: white;
+    padding: 1rem;
+    border: 1px solid #1c5b3e; 
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.login-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 1;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .header {
+        padding: 1rem;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+
+    .phone {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    
+    .header {
+        padding: 1rem;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+
+    .phone {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
